@@ -21,12 +21,5 @@ class ApiController extends Controller
         $json = json_decode(file_get_contents($url), true);
 
         dd($json);
-//        $url = '';
-//
-//        $currency = new Currency();
-//        $currency = $request->all();
-//        $currency->save();
-//
-//        return 'ok';
     }
 }
