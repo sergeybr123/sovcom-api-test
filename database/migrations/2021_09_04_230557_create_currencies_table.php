@@ -21,7 +21,7 @@ class CreateCurrenciesTable extends Migration
             $table->dateTime('begin_at')->nullable();
             $table->integer('office_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->softDeletes('delete_at')->nullable();
+            $table->softDeletes('deleted_at')->nullable();
         });
     }
 
