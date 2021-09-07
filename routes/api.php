@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::get('currency', [\App\Http\Controllers\ApiController::class, 'index'])->name('currency');
+Route::get('currency', [ApiController::class, 'index'])->name('currency');
+Route::post('insert', [ApiController::class, 'insert_currency'])->name('insert');

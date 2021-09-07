@@ -22,4 +22,20 @@ class ApiController extends Controller
 
         dd($json);
     }
+
+    public function insert_currency(Request $request)
+    {
+        $currency = Currency::updateOrCreate(
+            ['currency' => $request->currency],
+            [
+                'currency' => $request->currency,
+                'bay' => $request->bay,
+                'sell' => $request->sell,
+                'begin_at' => $request->begin_at,
+                'office_id' => $request->office_id,
+            ]
+        );
+
+        return response()->json(['message' => 'Ok'], 200);
+    }
 }
